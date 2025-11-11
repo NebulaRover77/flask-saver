@@ -1,0 +1,24 @@
+services:
+  redirector:
+    container_name: redirector
+    build: .
+    image: redirector:latest
+    restart: unless-stopped
+    environment:
+      MAX_BODY_BYTES: ${MAX_BODY_BYTES:-1048576}
+      MASK_HEADERS: ${MASK_HEADERS:-authorization}
+    networks:
+      shared:
+        aliases: [redirector]
+    expose:
+      - 8080
+    volumes:
+      - redirector_data:/data
+
+volumes:
+  redirector_data:
+
+networks:
+  shared:
+    external: true
+    name: shared

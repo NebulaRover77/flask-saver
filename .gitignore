@@ -1,0 +1,53 @@
+# ---- OS / editor junk ----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.vscode/
+.idea/
+*.iml
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+.cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# ---- Env / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Logs / temp ----
+*.log
+logs/
+tmp/
+*.bak
+
+# ---- SQLite & local data ----
+*.db
+*.db-*
+*.sqlite*
+*.sqlite3
+
+# ---- Docker / Compose (local overrides) ----
+docker-compose.override.yml
+*.pid
+
+# ---- Misc ----
+# (keep CSV exports committed if you want; remove next line if you prefer to track them)
+# *.csv
