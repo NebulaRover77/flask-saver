@@ -4,6 +4,7 @@ services:
     build: .
     image: redirector:latest
     restart: unless-stopped
+    user: "${REDIRECTOR_ID:-30003}:${REDIRECTOR_ID:-30003}"
     environment:
       MAX_BODY_BYTES: ${MAX_BODY_BYTES:-1048576}
       MASK_HEADERS: ${MASK_HEADERS:-authorization}
